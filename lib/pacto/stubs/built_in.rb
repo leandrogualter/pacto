@@ -16,6 +16,12 @@ module Pacto
           })
       end
 
+      def request_pattern request
+        pattern = WebMock::RequestPattern.new(request.method, "#{request.host}#{request.path}")
+        pattern = pattern.with(request_details(request)) if Pacto.configuration.strict_matchers
+        pattern
+      end
+
       def reset!
         WebMock.reset!
         WebMock.reset_callbacks
