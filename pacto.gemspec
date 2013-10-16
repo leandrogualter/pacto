@@ -31,6 +31,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "rspec"
   gem.add_development_dependency "should_not"
   gem.add_development_dependency "aruba"
+  gem.add_development_dependency "relish"
   gem.add_development_dependency "guard-rspec"
   gem.add_development_dependency "rubocop"
   gem.add_development_dependency "guard-rubocop"
