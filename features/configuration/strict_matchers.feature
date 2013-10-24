@@ -56,7 +56,7 @@ Feature: Strict Matching
       def response url, headers
         begin
           HTTParty.get(url, headers)
-        rescue => e
+        rescue WebMock::NetConnectNotAllowedError => e
           e.class
         end
       end
